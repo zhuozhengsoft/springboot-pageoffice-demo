@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <title>打开Word文件</title>
+        <script type="text/javascript">
+          	function Save() {
+              	document.getElementById("PageOfficeCtrl1").WebSave();
+        	}
+
+        	//盖章
+           function AddSeal() {
+			try{
+        		  document.getElementById("PageOfficeCtrl1").ZoomSeal.AddSeal();
+			}catch (e){ };
+        	}
+
+        	//关闭窗口并刷新页面
+            function ClosePage() {
+                //这个fefresh()方法是写在前端项目的POBrowser的父页面的，在openWindowModeless()方法所在页面
+                window.external.CallParentFunc("refresh();");
+                window.external.close();
+
+            }
+        </script>
+    </head>
+    <body>
+        <div style="width:auto;height:700px;" th:utext="${pageoffice}"></div>
+    </body>
+</html>
