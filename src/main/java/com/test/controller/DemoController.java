@@ -45,7 +45,8 @@ public class DemoController {
 	
 	@RequestMapping(value="/word", method=RequestMethod.GET)
 	public ModelAndView showWord(HttpServletRequest request, Map<String,Object> map){
-		
+
+
 		PageOfficeCtrl poCtrl=new PageOfficeCtrl(request);
 		poCtrl.setServerPage("/poserver.zz");//设置服务页面
 		poCtrl.addCustomToolButton("保存","Save",1);//添加自定义保存按钮
