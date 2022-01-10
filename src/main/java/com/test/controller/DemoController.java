@@ -40,7 +40,6 @@ public class DemoController {
 
 	@RequestMapping("/hello")
 	public String test() {
-		System.out.println("测试dev分支向远程仓库dev分支提交");
 		return "Hello";
 	}
 	
