@@ -40,7 +40,7 @@ public class DemoController {
 
 	@RequestMapping("/hello")
 	public String test() {
-		return "Hello";
+		return "Hello  spirngboot";
 	}
 	
 	@RequestMapping(value="/word", method=RequestMethod.GET)
